@@ -49,7 +49,7 @@ export class App extends Component{
     {
       label: 'Home',
       icon: 'pi pi-fw pi-home',
-      url: './CiudadApp.js'
+      url: '../views/Home/Ciudad.js'
     },
     {
       label: 'Calendar', 
@@ -105,7 +105,7 @@ export class App extends Component{
             </DataTable>
             <Dialog header="Registrar Pais" footer={this.footer} visible={this.state.visible} style={{ width: '30%' }} modal={true} onHide={() => this.setState({visible: false})}>
                 <span className="p-float-label">
-                <InputText style={{width: '100%'}} id="nombre" onChange={(e) => {
+                <InputText value={this.state.pais.nombre} style={{width: '100%'}} id="nombre" onChange={(e) => {
                     let valor = e.target.value;
                     this.setState(prevState =>{
                     console.log(valor);
